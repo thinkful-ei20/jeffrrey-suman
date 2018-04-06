@@ -83,6 +83,7 @@ function handleItemCheckClicked() {
 
 function removeItemFromShoppingList(itemIndex){
     console.log(`removeItemFromShoppingList ran`);
+    STORE.splice(itemIndex,1);
 }
 
 
@@ -93,7 +94,7 @@ function handleDeleteItemClicked() {
    const itemIndex = getItemIndexFromElement(event.currentTarget);
    console.log(itemIndex);
    removeItemFromShoppingList(itemIndex);
-    //console.log('`handleDeleteItemClicked` ran');
+   renderShoppingList();
   });  
 }
 
